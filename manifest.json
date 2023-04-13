@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Disable Twitter Feed",
+    "version": "1.0",
+    "description": "Disables the main feed on Twitter and allows users to navigate tweets from specific people they follow",
+    "host_permissions": ["https://twitter.com/*"],
+    "permissions": ["storage"],
+    "content_scripts": [
+      {
+        "matches": ["https://twitter.com/*"],
+        "js": ["disableFeed.js"]
+      }
+    ],
+    "icons": {
+      "16": "icon16.png",
+      "32": "icon32.png"
+    },
+    "action": {
+        "default_icon": {
+          "16": "icon16.png",
+          "32": "icon32.png"
+        },
+        "default_title": "Click Me",
+        "default_popup": "popup.html"
+    }
+    
+  }
